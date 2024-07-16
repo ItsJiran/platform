@@ -35,7 +35,8 @@ class PlatformModuleFetch extends Command
         // git ls-remote --heads | repo_url
         // git ls-remote --tags  | repo_url
 
-        // masukkin current tags / heads ke 
+        // 1. masukkin current tags / heads ke setiap module yang terdetect di module list 
+        // 2. coba fetch masing-masing repo_url untuk check apakah ada tags / heads yang berbeda
 
         foreach (Cache::get('modules') as $module) {
             array_push($modules, [
