@@ -1,5 +1,8 @@
 // Plugins
-import { registerMobilePlugins } from "@plugins";
+import { registerDesktopPlugins } from "@plugins";
+
+// Style
+import "@styles/settings.css";
 
 // Components
 import App from "./App.vue";
@@ -9,6 +12,6 @@ import { createApp } from "vue";
 
 const app = createApp(App);
 
-registerMobilePlugins(app);
+registerDesktopPlugins(app);
 
 app.mount("#monosoft");

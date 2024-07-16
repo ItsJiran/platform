@@ -79,7 +79,12 @@ class PlatformServiceProvider extends ServiceProvider
         /** Publish File and Folder */
         $this->publishes([
             __DIR__ . '/../resources' => resource_path(),
+            __DIR__ . '/../config/database.php' => config_path('database.php'),
+            __DIR__ . '/../config/cors.php' => config_path('cors.php'),
+            __DIR__ . '/../frontend' => resource_path(),
             __DIR__ . '/../modules' => base_path('modules'),
+            __DIR__ . '/../routes' => base_path('routes'),
+            __DIR__ . '/../seeders' => database_path('seeders'),
             __DIR__ . '/../.eslintrc.js' => base_path('.eslintrc.js'),
             __DIR__ . '/../package.json' => base_path('package.json'),
             __DIR__ . '/../vite.config.mjs' => base_path('vite.config.js'),

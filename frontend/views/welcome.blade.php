@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" translate="no">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" translate="no">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,14 +13,17 @@
         />
         <meta http-equiv="Pragma" content="no-cache" />
         <meta http-equiv="Expires" content="0" />
+        <meta name="theme-color" content="#3e454a" />
         <link rel="icon" href="/assets/favicon.ico" sizes="48x48" />
         <link
             rel="apple-touch-icon"
             href="/assets/apple-touch-icon.png"
             sizes="180x180"
         />
-        <meta name="theme-color" content="#3e454a" />
-        <title>SiMASTEN</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Madimi+One&display=swap" rel="stylesheet">
+        <title>Monoland Platform</title>
     </head>
 
     <body>
@@ -31,6 +34,6 @@
 
         <div id="monosoft"></div>
 
-        <script type="module" src="/src/mobile.js"></script>
+        @vite(['resources/src/mobile.js'])
     </body>
 </html>

@@ -27,8 +27,9 @@ class PlatformModuleList extends Command
     public function handle()
     {
         $modules = []; 
+        $cacheModules = Cache::get('modules') ?: [];
         
-        foreach(Cache::get('modules') as $module) {
+        foreach($cacheModules as $module) {
             array_push($modules, [
                 $module->namespace,
                 $module->name,

@@ -56,7 +56,7 @@ class PlatformModuleMigrate extends Command
             $tableName = str($migrationName)->after("_create_")->before("_table")->toString();
 
             DB::connection($module->connection)
-                ->statement('DROP TABLE if exists ' . $tableName . ' cascade');
+                ->statement('DROP TABLE IF EXISTS ' . $tableName);
         }
 
         $this->call('migrate', [
